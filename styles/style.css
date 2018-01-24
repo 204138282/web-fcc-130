@@ -1,0 +1,245 @@
+body {
+  font-family: "PingFang SC", "Arial Narrow", Arial, sans-serif;
+  background-color: gray;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  color: rgba(52, 52, 54, 0.5);
+}
+
+button {
+  font-family: inherit;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border-color: rgba(52, 52, 54, 1);
+  border-width: 2px;
+  margin-right: 5px;
+}
+
+main {
+  padding: 0;
+  margin: 134px 20%;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+  color: rgba(136, 136, 136, 1);
+  font-weight: bold;
+}
+
+input {
+  height: 60px;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 5px;
+  -webkit-appearance: textfield;
+  border-width: 0;
+  border-bottom-color: rgba(136, 136, 136, 1);
+  border-bottom-width: 1px;
+}
+textarea {
+  font-size: 20px;
+  width: 100%;
+  margin-top: 5px;
+  /* position: relative; 【不会被‘悬浮’控件遮挡】*/
+  border-width: 0;
+  border-bottom-color: rgba(136, 136, 136, 1);
+  border-bottom-width: 1px;
+}
+.tip-img {
+  width: 40px;
+  height: 40px;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: skyblue;
+  left: 0;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+}
+
+.icon {
+  margin: 10px;
+}
+.user-img {
+  size: 50px 50px;
+  margin: 0 10px 0 5px;
+}
+.title {
+  margin: 10px auto 0 10px;
+}
+.forks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-flow {
+  text-align: center;
+  background-color: rgba(114, 40, 113, 1);
+  left: 0;
+  top: 64px;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+}
+.section-top {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(160, 170, 170, 0.7);
+  border: 0 solid rgba(136, 136, 136, 1);
+  border-bottom-color: rgba(136, 136, 136, 1);
+  border-bottom-width: 1px;
+}
+.section-cneter {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgba(136, 136, 136, 1);
+  border-bottom-color: rgba(136, 136, 136, 1);
+  border-bottom-width: 1px;
+}
+.div-introduce {
+  color: white;
+  font-family: "PingFang SC";
+  font-size: 18px;
+}
+.show-img {
+  width: 200px;
+  height: 200px;
+  margin: 20px 20px 10px;
+  border-radius: 125px;
+}
+.li {
+  max-width: 45%;
+  margin: 20px;
+}
+.li-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.ul-list {
+  padding: 0;
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+button:nth-child(1) {
+  width: 50px;
+}
+button:nth-child(3) {
+  background-color: rgba(52, 52, 54, 1);
+}
+
+/*CONTACT ME*/
+.contact-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 30px;
+}
+.contact-me-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-me-right {
+  width: 45%;
+}
+.note-by {
+  margin-top: 50px;
+}
+.main-footer {
+  height: 150px;
+  background-color: rgba(170, 170, 170, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.main-footer-left {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-footer-right {
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#btn-send {
+  height: 30px;
+  background-color: white;
+  color: black;
+  border-color: rgba(52, 52, 54, 1);
+  border-width: 1px;
+  margin: 30px auto 0 5px;
+}
+.main-footer-a:hover,
+.main-footer-a:visited,
+.main-footer-a:link,
+.main-footer-a:active {
+  color: royalblue;
+  text-decoration: none;
+}
+
+.main-footer-ul {
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: initial;
+}
+
+.main-footer-linked-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(170, 170, 170, 1);
+  border-color: white;
+  cursor: pointer;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  -webkit-tap-highlight-color: blue;
+}
+
+.html-footer {
+  height: 60px;
+  background-color: rgba(114, 40, 113, 1);
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
