@@ -10,11 +10,13 @@
      <link href="//fonts.gdgdocs.org/css?family=Lobster" rel="stylesheet" type="text/css">
      <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" />
      <title>Document</title>
+     <!--script-->
+     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
 </head>
-   
+
 <body>
-     <header>    
-          <div class="header">  
+     <header>
+          <div class="header">
                <div class="icon">
                     <img class="tip-img" src="http://www.easyicon.net/api/resizeApi.php?id=1155598&size=128">
                </div>
@@ -25,20 +27,30 @@
                     </p>
                </div>
                <div class="forks">
-                    <button class="fa fa-heart"></button>
-                    <button class="fa fa-code-fork">&nbsp;Fork</button>
-                    <button class="fa fa-eye">&nbsp;Change View</button>
+                    <button class="forks-btn fa fa-heart"></button>
+                    <button class="forks-btn fa fa-code-fork">&nbsp;Fork</button>
+                    <button class="forks-btn fa fa-eye">&nbsp;Change View</button>
                     <img class="user-img" src="http://www.easyicon.net/api/resizeApi.php?id=1170609&size=50">
                </div>
-          </div>    
-     </header>     
-       
-     <!--main-->      
-   
+          </div>
+     </header>
 
-     <header class="header-flow">123</header>
+     <!--main-->
+
+
+     <header class="header-flow">
+          <img class="header-flow-img" src="http://oysgnk0c4.bkt.clouddn.com/yy/mark/yy/mark/qlip.png" alt="qlip | UI/UX Design and Development"
+               title="qlip | UI/UX Design and Development">
+          <ul class="header-flow-ul">
+               <li>
+                    <a href="#section-top" class="header-flow-a" id="about-a">ABOUT</a>
+                    <a href="#section-center" class="header-flow-a" id="portfolio-a">PORTFOLIO</a>
+                    <a href="#section-bottom" class="header-flow-a" id="contact-a">CONTACT</a>
+               </li>
+          </ul>
+     </header>
      <main>
-          <section class="section-top">
+          <section id="section-top" class="section-top">
                <div class="div-introduce">
                     Front-End Developer and UX/UI designer, with practical experience in project management, branding strategy, and creative
                     direction; devoted to functional programming and information architecture.
@@ -46,10 +58,10 @@
                </div>
                <img class="show-img" src="http://oysgnk0c4.bkt.clouddn.com/yy/mark/yy/mark/show.jpg">
           </section>
-
+ 
           <!--main-center-->
-
-          <section class="section-cneter">
+          
+          <section id="section-center" class="section-cneter">
                <h1>PORTFOLIO</h1>
                <hr style="width:60%;height:5px;text-align:right;align-items:flex-end;background-color:gray;border-width:0;" />
                <ul class="ul-list">
@@ -76,7 +88,7 @@
 
           <!--main-bottom-->
 
-          <section class="section-cneter">
+          <section id="section-bottom" class="section-cneter">
                <h1>CONTACT ME</h1>
                <hr style="width:60%;height:5px;text-align:right;align-items:flex-end;background-color:gray;border-width:0;" />
                <div class="contact-me">
@@ -96,26 +108,26 @@
                               <br/>I promise to reply A.S.A.P.</p>
                          <p class="note-by">Note: No spam/soliciting pour moi, merci :)</p>
                     </div>
-               </div>  
-          </section> 
-     </main>  
-     <footer class="main-footer">     
+               </div>
+          </section>
+     </main>
+     <footer class="main-footer">
           <div class="main-footer-left">
                <p style="font-weight:bold;font-size:22px;color:white;">ABOUT THIS PAGE</p>
                <p style="text-align:center;color:white;">Made with
                     <i class="fa fa-fw fa-coffee"></i>and
-                    <i class="fa fa-fw fa-music"></i> 
-                    <br />by    
+                    <i class="fa fa-fw fa-music"></i>
+                    <br />by
                     <a class="main-footer-a" href="https://github.com/204138282">Justin Sane</a>.</p>
           </div>
-          <div class="main-footer-right">  
-               <p style="font-weight:bold;font-size:22px;color:white;margin:0;">AROUND THE WEB</p>
-               <ul class="main-footer-ul">  
-                    <li> 
+          <div class="main-footer-right">
+               <p style="font-weight:bold;font-size:22px;color:white;margin-top:20px;">AROUND THE WEB</p>
+               <ul class="main-footer-ul">
+                    <li>
                          <a href="https://github.com/204138282">
                               <button class="main-footer-linked-btn fa fa-fw fa-linkedin"></button>
                          </a>
-                    </li> 
+                    </li>
                     <li>
                          <a href="https://github.com/204138282">
                               <button class="main-footer-linked-btn fa fa-fw fa-github"></button>
@@ -137,5 +149,76 @@
 </body>
 
 <footer class="html-footer">Xiaolou © 2018. All Rights Reversed</footer>
+
+<script>
+     // function onmousemoveAction() {
+     //      $("#portfolio-a").css("border","2px solid red");
+     // }
+     // function onmouseoutAction() {
+     //      $("#portfolio-a").css("border","none");
+     // }
+
+     $(document).ready(function () {
+          $("#about-a").click(function () {
+               $(this).css("background-color", "white");
+               $("#portfolio-a").css("background-color", "transparent", "border");
+               $("#contact-a").css("background-color", "transparent");
+               $(this).on('click',
+                    function () {
+                         $('html,body').animate({
+                              scrollTop: $($.attr(this, 'href')).offset().top
+                         }, 500);
+                         return false;
+                    })
+          });
+          $("#portfolio-a").click(function () {
+               $(this).css("background-color", "white");
+               $("#about-a").css("background-color", "transparent");
+               $("#contact-a").css("background-color", "transparent");
+          });
+
+          $("#contact-a").click(function () {
+               $(this).css("background-color", "white");
+               $("#portfolio-a").css("background-color", "transparent");
+               $("#about-a").css("background-color", "transparent");
+          });
+
+          /**
+           *  【鼠标悬停】方法一：
+          $("a.header-flow-a").hover(//为li绑定了鼠标进入和鼠标移开的两个参数  
+               function () {
+                    $(this).css("border", "1px solid rgba(255,255,255,0.5)")
+               }, function () {
+                    $(this).css("border", "none")
+               }
+          );
+          $("button").hover(//为li绑定了鼠标进入和鼠标移开的两个参数  
+               function () {
+                    $(this).animate({
+                         borderWidth: "10px"
+                    })
+               }, function () {
+                    $(this).css({
+                         borderWidth: "2px"
+                    })
+               }
+          );*/
+
+          /*【鼠标悬停】方法二：*/
+          $("a.header-flow-a").mouseover(function(){
+               $(this).css("border", "1px solid rgba(255,255,255,0.5)")
+          })
+          $("a.header-flow-a").mouseout(function(){
+               $(this).css("border", "none")
+          })
+          $("button.main-footer-linked-btn").mouseover(function(){
+               $(this).animate({ borderWidth: "10px" })
+          })
+          $("button.main-footer-linked-btn").mouseout(function(){
+               $(this).animate({ borderWidth: "2px" })
+          })
+
+     });
+</script>
 
 </html>
